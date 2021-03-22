@@ -1,0 +1,22 @@
+.underline-pink {
+  text-decoration-color: #ec4899 !important;
+  text-decoration: underline;
+}
+.dog-emoji-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.dog-emoji-list li {
+  padding-left: 1.5rem;
+  text-indent: -0.75rem;
+}
+.dog-emoji-list li::before {
+  content: "🐶";
+}
+.box-image {
+  border: 4px dashed #ec4899;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}

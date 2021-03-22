@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🐶 Dog Care | Helping you raise your pets</title>
+    <link href="./assets/styles/tailwind.css" rel="stylesheet" />
+    <link href="./assets/styles/index.css" rel="stylesheet" />
+  </head>
+  <body class="flex-1 flex-ro bg-gray-800">
+    <nav
+      x-data="{show:false}"
+      class="flex items-center justify-between flex-wrap bg-pink-500 p-6"
+    >
+      <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <img
+          src="/assets/dog-jumping.svg"
+          alt="drawing of a dog jumping"
+          style="width: 42px; height: 42px; margin-right: 6px"
+        />
+        <span class="font-semibold text-xl tracking-tight">Dog Care</span>
+      </div>
+      <div class="block md:hidden">
+        <button
+          @click="show=!show"
+          class="flex items-center px-3 py-2 border rounded text-gray-100 border-gray-200 hover:text-white hover:border-white"
+        >
+          <svg
+            class="fill-current h-3 w-3"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+      <div
+        @click.away="show = false"
+        :class="{ 'block': show, 'hidden': !show }"
+        class="w-full block flex-grow md:flex md:justify-end md:w-auto"
+      >
+        <div>
+          <ul style="list-style: none; list-style-type: none">
+            <li style="display: inline">
+              <a
+                href="#"
+                class="block md:inline-block text-sm px-4 py-2 leading-none rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-pink-700 mt-4 md:mt-0"
+                >Home
+              </a>
+            </li>
+            <li style="display: inline">
+              <a
+                href="#"
+                class="block md:inline-block text-sm px-4 py-2 leading-none rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-pink-700 mt-4 md:mt-0"
+                >Services</a
+              >
+            </li>
+            <li style="display: inline">
+              <a
+                href="#"
+                class="block md:inline-block text-sm px-4 py-2 leading-none rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-pink-700 mt-4 md:mt-0"
+                >Products</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mx-auto mt-4">
+      <article class="flex flex-col mx-2 flex-1 md:flex-row md:my-0">
+        <!-- Primary Content -->
+        <section class="flex-1 flex-row">
+          <h1 class="text-4xl text-white mb-3">
+            Take Care of your Fury <span class="underline-pink"> Friends </span>
+          </h1>
+          <p class="text-white text-base tracking-wide leading-7 font-light">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <h2 class="text-3xl text-white">
+            <span class="underline-pink">Tips</span> for Taking Care of your
+            Pets
+          </h2>
+          <p class="text-white text-base tracking-wide leading-7 font-light">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Adipiscing enim eu turpis egestas pretium aenean. Molestie at
+            elementum eu facilisis sed odio morbi.
+          </p>
+          <div class="mt-2">
+            <ul
+              class="dog-emoji-list text-white tracking-wide leading-7 font-thin"
+            >
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </li>
+            </ul>
+          </div>
+          <div class="box-image">
+            <img
+              class="mx-4 my-4"
+              src="https://www.petmd.com/sites/default/files/young-man-dog.jpg"
+              alt="Pciture of a man hugging dog looking at camera"
+            />
+          </div>
+          <div
+            class="mt-4 py-4 px-4 bg-gray-700 rounded-md border-l-4 border-pink-500"
+          >
+            <blockquote class="text-white italic">
+              “The only creatures that are evolved enough to convey pure love
+              are dogs and infants.”
+              <span class="text-white text-pink-500 text-lg">
+                - Jonny Deep
+              </span>
+            </blockquote>
+          </div>
+        </section>
+        <!-- Form -->
+        <section class="flex-1 flex-col">
+          <div
+            class="flex mt-4 md:mt-0 flex-1 flex-col padding-2 bg-gray-700 border rounded-md border-8 border-pink-500"
+          >
+          <form class="flex flex-1 flex-col mx-4 my-2 justify-between">
+            <fieldset class="flex flex-col">
+              <h1 class="text-3xl text-white mb-1 text-center">
+                  <legend>
+                    <span class="underline-pink"> Signup </span> to our
+                    <span class="text-pink-500"> Newsletter </span>
+                  </legend>
+              </h1>
+              <label for="email" class="text-white text-lg">
+                Email Address
+              </label>
+              <input
+              id="email"
+              class="rounded-md bg-transparent border-8 border border-gray-900 focus:border-pink-500 text-white my-2 p-1"
+              style="text-indent: 1rem"
+              />
+            </fieldset>
+            <input
+            type="submit"
+            value="Send me more information"
+            class="font-bold rounded-md bg-pink-500 text-white mt-4 py-2 px-4"
+            />
+          </fieldset>  
+          </form>
+        </div>
+      </section>
+    </article>
+  </div>
+</body>
+</html>
